@@ -13,6 +13,8 @@ sudo ufw enable
 
 sudo pacman -S fail2ban
 
+ssh-keygen -t ed25519 -C "miha.rijavec24@gmail.com"
+
 git clone https://aur.archlinux.org/yay.git ~/Developer/yay
 cd ~/Developer/yay || exit
 makepkg -si
@@ -60,3 +62,6 @@ rm -rf ~/.config/nvim/.git
 
 rm -rf ~/Developer/yay
 rm -rf ~/Developer/alacritty
+
+echo Your ssh key was created. Add it to your github account.
+cat ~/.ssh/id_ed25519.pub
