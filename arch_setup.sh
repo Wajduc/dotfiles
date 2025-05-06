@@ -4,7 +4,7 @@ mkdir ~/Developer
 
 sudo pacman -Syu
 sudo pacman -S --needed base-devel git
-sudo pacman -S htop neofetch ufw sl wget curl zip unzip cmake freetype2 fontconfig pkg-config make libxcb libxkbcommon python neovim lazygit wl-clipboard fzf ripgrep fd discord zsh stow nodejs npm hyprland wofi waybar
+sudo pacman -S htop neofetch ufw sl wget curl zip unzip cmake freetype2 fontconfig pkg-config make libxcb libxkbcommon python neovim lazygit wl-clipboard fzf ripgrep fd discord zsh stow nodejs npm hyprland wofi waybar pavucontrol
 yay -S hyprshot swaync hyprlock hypridle hyprpaper
 
 sudo ufw default deny incoming
