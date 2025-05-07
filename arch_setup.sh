@@ -18,8 +18,7 @@ git clone https://aur.archlinux.org/yay.git ~/Developer/yay
 cd ~/Developer/yay || exit
 makepkg -si
 
-yay -Sy brave-bin steam
-yay -S hyprshot swaync hyprlock hypridle hyprpaper
+yay -Sy brave-bin hyprshot swaync hyprlock hypridle hyprpaper
 
 cd ~/Downloads || exit
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
@@ -51,6 +50,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM
 cd ~/dotfiles || exit
 rm ~/.zshrc
 stow -vt ~ zsh
+stow -vt ~ p10k
 stow -vt ~ alacritty
 stow -vt ~ hypr
 stow -vt ~ waybar
