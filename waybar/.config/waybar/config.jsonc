@@ -4,7 +4,7 @@
     "hyprland/workspaces"
   ],
   "modules-center": [
-    "hyprland/window"
+    "custom/window-icon"
   ],
   "modules-right": [
     "pulseaudio",
@@ -26,5 +26,10 @@
       ]
     },
     "on-click": "pavucontrol"
+  },
+  "custom/window-icon": {
+    "exec": "~/.config/waybar/scripts/window-icon.sh",
+    "interval": 1,
+    "return-type": "json"
   }
 }
