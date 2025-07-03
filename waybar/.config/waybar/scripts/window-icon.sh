@@ -5,11 +5,12 @@ app_class=$(hyprctl activewindow -j | jq -r '.class')
 
 # Map window class to Nerd Font icons
 case "$app_class" in
-Brave-browser) icon=" " ;; # Firefox browser
+Brave-browser) icon=" " ;; # Brave browser
 Alacritty) icon=" " ;;
 org.kde.dolphin) icon=" " ;; # File manager
+discord) icon=" " ;;         # discord
 vlc) icon="󰕼 " ;;             # Video player
-Steam) icon=" " ;;           # OBS Studio
+steam) icon=" " ;;           # steam
 Gimp) icon=" " ;;
 *) icon=" " ;; # Fallback icon
 esac
