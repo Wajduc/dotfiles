@@ -4,13 +4,14 @@ mkdir ~/Developer
 
 sudo pacman -Syu
 sudo pacman -S --needed base-devel git
-sudo pacman -S htop neofetch ufw sl wget curl zip unzip cmake freetype2 fontconfig pkg-config make libxcb libxkbcommon python neovim lazygit wl-clipboard fzf ripgrep fd discord zsh stow nodejs npm hyprland wofi waybar pavucontrol obsidian vlc gimp network-manager-applet networkmanager strace jq libreoffice-still
+
+for pkg in $(cat pacman_packages.txt); do
+  sudo pacman -S "$pkg"
+done
 
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
-
-sudo pacman -S fail2ban
 
 sudo systemctl enable --now NetworkManager
 
@@ -20,7 +21,9 @@ git clone https://aur.archlinux.org/yay.git ~/Developer/yay
 cd ~/Developer/yay || exit
 makepkg -si
 
-yay -Sy brave-bin hyprshot swaync hyprlock hypridle hyprpaper nwg-look catppuccin-gtk-theme-mocha
+for pkg in $(cat yay_packages.txt); do
+  yay -S "$pkg"
+done
 
 cd ~/Downloads || exit
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip

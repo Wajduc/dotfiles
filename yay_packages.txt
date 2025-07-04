@@ -1,0 +1,8 @@
+brave-bin
+hyprshot
+swaync
+hyprlock
+hypridle
+hyprpaper
+nwg-look
+catppuccin-gtk-theme-mocha
