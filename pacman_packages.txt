@@ -38,3 +38,4 @@ jq
 libreoffice-still
 fail2ban
 dns-utils
+meld
