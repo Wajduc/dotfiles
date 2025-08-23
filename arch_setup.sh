@@ -72,15 +72,6 @@ sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
 sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-read -p "You done? (yes/no): " response
-if [[ "${response,,}" == "yes" ]]; then
-  echo "Yeah, that's what i thought."
-else
-  exit
-fi
-
 cd ~/dotfiles || exit
 stow -vt ~ alacritty
 stow -vt ~ hypr
@@ -94,5 +85,6 @@ rm -rf ~/.config/nvim/.git
 rm -rf ~/Developer/yay
 rm -rf ~/Developer/alacritty
 
-echo Your ssh key was created. Add it to your github account.
-cat ~/.ssh/id_ed25519.pub
+echo
+echo
+read -p "PRESS ANY KEY TO CONTINUE"
