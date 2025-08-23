@@ -5,9 +5,21 @@ mkdir ~/Developer
 sudo pacman -Syu
 sudo pacman -S --needed base-devel git
 
+echo
+echo
+echo
+echo "==============================================================================================================================================="
+echo "Installing pacman packages"
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo
+
 for pkg in $(cat pacman_packages.txt); do
-  sudo pacman -S "$pkg"
+  sudo pacman -S --noconfirm "$pkg"
 done
+
+echo
+echo "==============================================================================================================================================="
+echo
 
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
@@ -21,9 +33,22 @@ git clone https://aur.archlinux.org/yay.git ~/Developer/yay
 cd ~/Developer/yay || exit
 makepkg -si
 
+echo
+echo
+echo
+echo "==============================================================================================================================================="
+echo "Installing yay packages"
+echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo
+
+cd ~/dotfiles
 for pkg in $(cat yay_packages.txt); do
-  yay -S "$pkg"
+  yay -S --noconfirm "$pkg"
 done
+
+echo
+echo "==============================================================================================================================================="
+echo
 
 cd ~/Downloads || exit
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
@@ -48,6 +73,14 @@ sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+read -p "You done? (yes/no): " response
+if [[ "${response,,}" == "yes" ]]; then
+  echo "Yeah, that's what i thought."
+else
+  exit
+fi
+
 git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
