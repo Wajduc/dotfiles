@@ -31,10 +31,10 @@ waybar
 pavucontrol
 obsidian
 vlc
-gimp
 network-manager-applet
 networkmanager
 strace
 jq
 libreoffice-still
 fail2ban
+dns-utils
