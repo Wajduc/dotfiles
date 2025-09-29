@@ -1,0 +1,2 @@
+
+** (waybar:28131): WARNING **: 10:13:15.724: Status Notifier Item with bus name ':1.7' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered

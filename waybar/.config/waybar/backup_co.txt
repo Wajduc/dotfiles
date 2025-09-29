@@ -1,0 +1,35 @@
+{
+  "position": "top",
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "custom/window-icon"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "tray",
+    "clock"
+  ],
+  "clock": {
+    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        " "
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "custom/window-icon": {
+    "exec": "~/.config/waybar/scripts/window-icon.sh",
+    "interval": 1,
+    "return-type": "json"
+  }
+}

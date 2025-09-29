@@ -88,3 +88,5 @@ rm -rf ~/Developer/alacritty
 echo
 echo
 read -p "PRESS ANY KEY TO CONTINUE"
+
+sudo shutdown now
