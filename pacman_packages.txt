@@ -1,4 +1,4 @@
-htop
+btop
 fastfetch
 ufw
 sl

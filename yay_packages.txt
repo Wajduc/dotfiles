@@ -1,8 +1,10 @@
 brave-bin
+viber
 hyprshot
 swaync
 hyprlock
 hypridle
 hyprpaper
 nwg-look
-catppuccin-gtk-theme-mocha
+kora-icon-theme
+orchis-theme

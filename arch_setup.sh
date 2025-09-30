@@ -72,11 +72,16 @@ sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
 sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 cd ~/dotfiles || exit
 stow -vt ~ alacritty
 stow -vt ~ hypr
 stow -vt ~ waybar
 stow -vt ~ wallpapers
+
+rm ~/.zshrc
+stow -vt ~ zsh
 
 cd ~ || exit
 git clone https://github.com/LazyVim/starter ~/.config/nvim
@@ -87,6 +92,6 @@ rm -rf ~/Developer/alacritty
 
 echo
 echo
-read -p "PRESS ANY KEY TO CONTINUE"
+read -p "PRESS ANY KEY TO REBOOT"
 
-sudo shutdown now
+sudo reboot
